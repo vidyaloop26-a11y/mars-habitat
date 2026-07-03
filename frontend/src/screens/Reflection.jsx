@@ -133,6 +133,7 @@ function ReflectionInner() {
   const [answers, setAnswers] = useState(() => gameState.getReflection(currentDay) || {});
   const [input, setInput] = useState("");
   const [showSummary, setShowSummary] = useState(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const vars = useMemo(() => gameState.getVars(), [showSummary]);
 
   useEffect(() => {
